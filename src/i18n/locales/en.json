@@ -1,0 +1,146 @@
+{
+  "app": {
+    "title": "QR Studio by efrathewolf www.degdl.com",
+    "subtitle": "Advanced QR code creator",
+    "skip": "Skip to content"
+  },
+  "header": {
+    "language": "Language",
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
+  "language": { "es": "Español", "en": "English", "fr": "Français" },
+  "tabs": {
+    "label": "Content type",
+    "text": "Text / URL",
+    "wifi": "Wi-Fi",
+    "vcard": "Contact",
+    "email": "Email",
+    "sms": "SMS",
+    "phone": "Phone",
+    "geo": "Location"
+  },
+  "common": { "clear": "Clear", "close": "Close", "showPassword": "Show password", "hidePassword": "Hide password" },
+  "fields": {
+    "content": "Text or URL",
+    "ssid": "Network name (SSID)",
+    "password": "Password",
+    "encryption": "Encryption",
+    "hidden": "Hidden network",
+    "first": "First name",
+    "last": "Last name",
+    "org": "Organization",
+    "jobtitle": "Job title",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "street": "Street",
+    "city": "City",
+    "zip": "ZIP / Postal code",
+    "country": "Country",
+    "to": "To",
+    "subject": "Subject",
+    "body": "Message",
+    "number": "Number",
+    "message": "Message",
+    "lat": "Latitude",
+    "lon": "Longitude"
+  },
+  "placeholders": { "content": "https://example.com" },
+  "enc": { "nopass": "None", "WPA": "WPA/WPA2", "WEP": "WEP" },
+  "geo": {
+    "detect": "📍 Detect my location",
+    "detecting": "Detecting…",
+    "openMaps": "View on Google Maps",
+    "useLast": "Use last location",
+    "unsupported": "This browser doesn't support geolocation.",
+    "unsupportedInsecure": "Geolocation requires HTTPS. Open the app from an https:// address or from localhost.",
+    "deniedHelp": "Allow location for this site in the address bar or in your browser settings, then try again.",
+    "deniedTitle": "Location permission blocked",
+    "permission": {
+      "label": "Location permission",
+      "granted": "granted",
+      "prompt": "will be requested on detect",
+      "denied": "denied",
+      "unknown": "unknown"
+    },
+    "toast": {
+      "detected": "Location detected ✓",
+      "denied": "Location permission denied",
+      "unavailable": "Location unavailable",
+      "timeout": "Request timed out",
+      "unknown": "Couldn't get your location",
+      "lastApplied": "Last location applied"
+    }
+  },
+  "design": {
+    "title": "Design options",
+    "open": "Design",
+    "shape": "Module shape",
+    "colorMode": "Color mode",
+    "fg": "Foreground",
+    "bg": "Background",
+    "grad": "Gradient color",
+    "box": "Module size",
+    "border": "Border",
+    "ec": "Error correction",
+    "logo": "Logo",
+    "logoSize": "Logo size (%)",
+    "browse": "Browse…",
+    "remove": "Remove",
+    "noLogo": "No logo selected",
+    "logoAlt": "Logo preview",
+    "logoInvalid": "Choose a PNG, JPG or SVG image.",
+    "logoTooBig": "The logo must be 2 MB or smaller.",
+    "logoEcRaised": "Error correction raised to H because a logo is used.",
+    "reset": "Reset to defaults",
+    "chooseColor": "Choose a color",
+    "shapes": {
+      "square": "Square",
+      "rounded": "Rounded",
+      "circle": "Circle",
+      "gapped": "Gapped",
+      "vertical": "Vertical bars",
+      "horizontal": "Horizontal bars"
+    },
+    "modes": {
+      "solid": "Solid",
+      "radial": "Radial gradient",
+      "square": "Square gradient",
+      "h": "Horizontal gradient",
+      "v": "Vertical gradient"
+    },
+    "ecLevels": {
+      "L": "L · Low (~7%)",
+      "M": "M · Medium (~15%)",
+      "Q": "Q · Quartile (~25%)",
+      "H": "H · High (~30%)"
+    }
+  },
+  "preview": {
+    "title": "Preview",
+    "alt": "QR code preview",
+    "empty": "Enter some content to see your QR code.",
+    "tooLong": "There's too much data for a QR code. Shorten the content or lower the error correction."
+  },
+  "export": {
+    "format": "Format",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "error": "Couldn't save the file",
+    "saveTitle": "Save QR code",
+    "formats": { "png": "PNG image", "jpg": "JPEG image", "svg": "SVG vector" }
+  },
+  "install": {
+    "text": "Install QR Studio to use it offline.",
+    "action": "Install app",
+    "dismiss": "Dismiss"
+  },
+  "pwa": { "offlineReady": "Ready to work offline" },
+  "errors": {
+    "email": "Enter a valid email address.",
+    "lat": "Latitude must be between -90 and 90.",
+    "lon": "Longitude must be between -180 and 180."
+  }
+}

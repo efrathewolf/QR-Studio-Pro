@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 22% 95%;
+    --foreground: 222 28% 11%;
+    --card: 0 0% 100%;
+    --muted: 216 20% 91%;
+    --muted-foreground: 220 12% 36%;
+    --border: 216 16% 84%;
+    --input: 218 12% 62%;
+    --ring: 176 80% 30%;
+    --primary: 176 82% 25%;
+    --primary-foreground: 0 0% 100%;
+    --destructive: 0 72% 42%;
+    --shadow: 222 40% 12%;
+  }
+
+  .dark {
+    --background: 224 30% 7%;
+    --foreground: 210 25% 94%;
+    --card: 224 24% 11%;
+    --muted: 224 18% 16%;
+    --muted-foreground: 217 14% 70%;
+    --border: 222 16% 22%;
+    --input: 222 12% 40%;
+    --ring: 172 70% 60%;
+    --primary: 172 70% 55%;
+    --primary-foreground: 224 40% 8%;
+    --destructive: 0 84% 68%;
+    --shadow: 0 0% 0%;
+  }
+
+  * { @apply border-border; }
+
+  html { color-scheme: light; }
+  html.dark { color-scheme: dark; }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    background-image:
+      radial-gradient(60rem 28rem at 12% -8%, hsl(var(--primary) / 0.14), transparent 70%),
+      radial-gradient(40rem 24rem at 100% 0%, hsl(var(--primary) / 0.08), transparent 70%);
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+}
+
+@layer components {
+  /* Glassmorphism sutil */
+  .glass {
+    @apply border border-border/70 bg-card/70 shadow-soft backdrop-blur-xl;
+  }
+
+  /* Marcas de corte de imprenta alrededor del QR */
+  .crop-marks {
+    --m: 14px;
+    --t: 2px;
+    --c: hsl(var(--muted-foreground));
+    padding: 18px;
+    background:
+      linear-gradient(var(--c), var(--c)) left top / var(--m) var(--t),
+      linear-gradient(var(--c), var(--c)) left top / var(--t) var(--m),
+      linear-gradient(var(--c), var(--c)) right top / var(--m) var(--t),
+      linear-gradient(var(--c), var(--c)) right top / var(--t) var(--m),
+      linear-gradient(var(--c), var(--c)) left bottom / var(--m) var(--t),
+      linear-gradient(var(--c), var(--c)) left bottom / var(--t) var(--m),
+      linear-gradient(var(--c), var(--c)) right bottom / var(--m) var(--t),
+      linear-gradient(var(--c), var(--c)) right bottom / var(--t) var(--m);
+    background-repeat: no-repeat;
+  }
+
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
+
+/* Respeta la preferencia de menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

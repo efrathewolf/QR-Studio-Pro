@@ -1,0 +1,146 @@
+{
+  "app": {
+    "title": "QR Studio by efrathewolf www.degdl.com",
+    "subtitle": "Creador de códigos QR avanzado",
+    "skip": "Saltar al contenido"
+  },
+  "header": {
+    "language": "Idioma",
+    "toLight": "Cambiar a modo claro",
+    "toDark": "Cambiar a modo oscuro"
+  },
+  "language": { "es": "Español", "en": "English", "fr": "Français" },
+  "tabs": {
+    "label": "Tipo de contenido",
+    "text": "Texto / URL",
+    "wifi": "Wi-Fi",
+    "vcard": "Contacto",
+    "email": "Correo",
+    "sms": "SMS",
+    "phone": "Teléfono",
+    "geo": "Ubicación"
+  },
+  "common": { "clear": "Limpiar", "close": "Cerrar", "showPassword": "Mostrar contraseña", "hidePassword": "Ocultar contraseña" },
+  "fields": {
+    "content": "Texto o URL",
+    "ssid": "Nombre de la red (SSID)",
+    "password": "Contraseña",
+    "encryption": "Cifrado",
+    "hidden": "Red oculta",
+    "first": "Nombre",
+    "last": "Apellido",
+    "org": "Organización",
+    "jobtitle": "Puesto",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "website": "Sitio web",
+    "street": "Calle",
+    "city": "Ciudad",
+    "zip": "Código postal",
+    "country": "País",
+    "to": "Para",
+    "subject": "Asunto",
+    "body": "Mensaje",
+    "number": "Número",
+    "message": "Mensaje",
+    "lat": "Latitud",
+    "lon": "Longitud"
+  },
+  "placeholders": { "content": "https://ejemplo.com" },
+  "enc": { "nopass": "Ninguno", "WPA": "WPA/WPA2", "WEP": "WEP" },
+  "geo": {
+    "detect": "📍 Detectar mi ubicación",
+    "detecting": "Detectando…",
+    "openMaps": "Ver en Google Maps",
+    "useLast": "Usar última ubicación",
+    "unsupported": "Este navegador no admite geolocalización.",
+    "unsupportedInsecure": "La geolocalización requiere HTTPS. Abre la app desde una dirección https:// o desde localhost.",
+    "deniedHelp": "Permite la ubicación para este sitio en la barra de direcciones o en los ajustes del navegador y vuelve a intentarlo.",
+    "deniedTitle": "Permiso de ubicación bloqueado",
+    "permission": {
+      "label": "Permiso de ubicación",
+      "granted": "concedido",
+      "prompt": "se pedirá al detectar",
+      "denied": "denegado",
+      "unknown": "desconocido"
+    },
+    "toast": {
+      "detected": "Ubicación detectada ✓",
+      "denied": "Permiso de ubicación denegado",
+      "unavailable": "Ubicación no disponible",
+      "timeout": "Tiempo de espera agotado",
+      "unknown": "No se pudo obtener la ubicación",
+      "lastApplied": "Última ubicación aplicada"
+    }
+  },
+  "design": {
+    "title": "Opciones de diseño",
+    "open": "Diseño",
+    "shape": "Forma del módulo",
+    "colorMode": "Modo de color",
+    "fg": "Color frontal",
+    "bg": "Fondo",
+    "grad": "Color del degradado",
+    "box": "Tamaño de módulo",
+    "border": "Borde",
+    "ec": "Corrección de errores",
+    "logo": "Logotipo",
+    "logoSize": "Tamaño del logo (%)",
+    "browse": "Examinar…",
+    "remove": "Quitar",
+    "noLogo": "Ningún logo seleccionado",
+    "logoAlt": "Vista previa del logotipo",
+    "logoInvalid": "Elige una imagen PNG, JPG o SVG.",
+    "logoTooBig": "El logo no puede pesar más de 2 MB.",
+    "logoEcRaised": "Corrección de errores elevada a H por usar logotipo.",
+    "reset": "Restablecer valores por defecto",
+    "chooseColor": "Elige un color",
+    "shapes": {
+      "square": "Cuadrado",
+      "rounded": "Redondeado",
+      "circle": "Círculo",
+      "gapped": "Con espacio",
+      "vertical": "Barras verticales",
+      "horizontal": "Barras horizontales"
+    },
+    "modes": {
+      "solid": "Sólido",
+      "radial": "Degradado radial",
+      "square": "Degradado cuadrado",
+      "h": "Degradado horizontal",
+      "v": "Degradado vertical"
+    },
+    "ecLevels": {
+      "L": "L · Baja (~7 %)",
+      "M": "M · Media (~15 %)",
+      "Q": "Q · Alta (~25 %)",
+      "H": "H · Máxima (~30 %)"
+    }
+  },
+  "preview": {
+    "title": "Vista previa",
+    "alt": "Vista previa del código QR",
+    "empty": "Introduce algún contenido para ver tu código QR.",
+    "tooLong": "Hay demasiados datos para un código QR. Acorta el contenido o baja la corrección de errores."
+  },
+  "export": {
+    "format": "Formato",
+    "save": "Guardar",
+    "saving": "Guardando…",
+    "saved": "Guardado",
+    "error": "No se pudo guardar el archivo",
+    "saveTitle": "Guardar código QR",
+    "formats": { "png": "Imagen PNG", "jpg": "Imagen JPEG", "svg": "Vector SVG" }
+  },
+  "install": {
+    "text": "Instala QR Studio para usarlo sin conexión.",
+    "action": "Instalar app",
+    "dismiss": "Descartar"
+  },
+  "pwa": { "offlineReady": "Lista para funcionar sin conexión" },
+  "errors": {
+    "email": "Introduce un correo válido.",
+    "lat": "La latitud debe estar entre -90 y 90.",
+    "lon": "La longitud debe estar entre -180 y 180."
+  }
+}
