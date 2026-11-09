@@ -1,46 +1,54 @@
-# QR Studio Pro
+# QR Studio (PWA)
 
-Generador avanzado de códigos QR con **Python + Streamlit**.
+Creador de códigos QR avanzado: React 18 + TypeScript + Vite + Tailwind + shadcn-style (Radix),
+Zustand, i18next (ES/EN/FR), react-hook-form + zod, sonner y vite-plugin-pwa.
 
-## Funciones
-- QR para enlaces, texto, Wi-Fi, contacto vCard, correo, teléfono, SMS y ubicación.
-- Personalización de colores, tamaño, nivel de corrección y borde.
-- Inserción opcional de logotipo.
-- Vista previa y descarga en PNG.
-- Interfaz en español.
-
-## Instalación local
-1. Instala Python 3.10 o superior.
-2. Descarga o clona este repositorio.
-3. En la carpeta del proyecto ejecuta:
+## 1. Instalar
 
 ```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py
+npm install
 ```
 
-Abre la dirección local que Streamlit muestra en la terminal (normalmente http://localhost:8501).
+## 2. Desarrollo en local con HTTPS
 
-## Uso
-1. Selecciona el tipo de QR en la barra lateral.
-2. Introduce los datos solicitados.
-3. Ajusta colores, tamaño y corrección de errores.
-4. Pulsa **Generar código QR**.
-5. Descarga el PNG.
+```bash
+npm run dev
+```
 
-## Despliegue
-Puede desplegarse en Streamlit Community Cloud conectando este repositorio y seleccionando `app.py`.
+Abre `https://localhost:5173`. `@vitejs/plugin-basic-ssl` genera un certificado autofirmado:
+el navegador mostrará un aviso la primera vez (Avanzado → Continuar).
+`geolocation` solo funciona en contexto seguro (HTTPS o `localhost`); para probarlo desde el
+móvil usa la URL `https://<IP-de-tu-PC>:5173` que imprime Vite (**Network**).
+
+## 3. Producir y probar el PWA
+
+```bash
+npm run build      # tsc + vite build → dist/
+npm run preview    # sirve dist/ por HTTPS en :4173 (service worker activo)
+```
+
+El service worker solo se genera en `build`; para probar la instalación y el modo offline usa `preview`.
+
+## 4. Desplegar (siempre sobre HTTPS)
+
+- **Vercel / Netlify**: importa el repositorio. Build command `npm run build`, output `dist`.
+  Ambas sirven HTTPS por defecto.
+- **GitHub Pages** (subruta): compila con la base del repositorio,
+  `BASE_PATH=/nombre-del-repo/ npm run build`, y publica `dist/` (p. ej. con `gh-pages -d dist`
+  o una GitHub Action de Pages). Los iconos del `<head>` (`/icon.svg`) usan ruta absoluta:
+  en subrutas cámbialos a rutas relativas (`icon.svg`).
 
 ## Estructura
-- `app.py`: aplicación Streamlit.
-- `qr_core.py`: generación y validación del contenido QR.
-- `requirements.txt`: dependencias.
-- `.streamlit/config.toml`: tema visual.
 
-## Licencia
-MIT.
+```
+src/
+  main.tsx · App.tsx · index.css
+  i18n/        i18n.ts + locales/{es,en,fr}.json
+  store/       useQrStore.ts (Zustand)
+  lib/         types · payload · schemas · svg (generador SVG) · download · utils
+  hooks/       useGeolocation · useQrPayload · useSliceForm · useDebounce · useTheme · useInstallPrompt · useMediaQuery
+  components/  Header · ContentCard · DesignPanel · QRPanel · ColorField · SliderField · InstallBanner
+    tabs/      TextTab · WifiTab · VCardTab · EmailTab · SmsTab · PhoneTab · LocationTab · Field
+    ui/        button · input · label · card · tabs · slider · select · switch · tooltip · popover · sheet
+public/        iconos PWA (192, 512, maskable, apple-touch) + icon.svg
+```
